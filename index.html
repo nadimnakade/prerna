@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prerna — Change starts with us | Prototype Demo</title>
+  <meta name="description" content="Prerna is a prototype website for an NGO working across education, healthcare and sports. Client-facing demo — no live payments or SMS." />
+  <meta name="theme-color" content="#0E3B2C" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E3B2C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23F4EEE1' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('anim-ready');
+    }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================== NAVIGATION ============================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#home" aria-label="Prerna home">Prerna<span class="nav__dot">.</span></a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Programmes</a>
+        <a href="#impact">Impact</a>
+        <a href="#stories">Stories</a>
+        <a href="#csr">CSR</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--sm btn--solid nav__donate" data-donate-open type="button">Donate</button>
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="menu" id="mobileMenu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#about"><em>01</em> About</a>
+      <a href="#work"><em>02</em> Programmes</a>
+      <a href="#impact"><em>03</em> Impact</a>
+      <a href="#stories"><em>04</em> Stories</a>
+      <a href="#give"><em>05</em> Ways to give</a>
+      <a href="#csr"><em>06</em> CSR</a>
+      <a href="#news"><em>07</em> News</a>
+      <a href="#contact"><em>08</em> Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <button class="btn btn--solid" data-donate-open type="button">Support Prerna</button>
+      <p class="menu__note">Prototype demo · hello@prerna.org</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="home">
+      <div class="hero__media" aria-hidden="true">
+        <!-- IMAGE: hero — children in a classroom (replaceable) -->
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=80" alt="" class="hero__img" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="eyebrow eyebrow--light" data-hero="1">Education · Healthcare · Sports</p>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Change starts</span></span>
+          <span class="line"><span class="line__inner"><em>with us.</em></span></span>
+        </h1>
+
+        <div class="hero__row">
+          <p class="hero__lede" data-hero="2">
+            Prerna works alongside communities to open classrooms, strengthen local health,
+            and give every child a place to grow. This is the proposed website and donor journey — a prototype.
+          </p>
+          <div class="hero__cta" data-hero="3">
+            <button class="btn btn--gold btn--lg" data-donate-open type="button">
+              Support Prerna
+              <span class="btn__icon" aria-hidden="true">↗</span>
+            </button>
+            <a class="btn btn--ghost btn--lg" href="#work">
+              Explore Our Work
+              <span class="btn__icon" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__foot container" data-hero="4">
+        <span class="hero__scroll"><span class="hero__scroll-line"></span> Scroll</span>
+        <span class="hero__meta">Prototype — demo content &amp; figures</span>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>About Prerna</p>
+          <p class="section__index" data-reveal>( 01 )</p>
+        </div>
+
+        <h2 class="about__statement" data-split>
+          We believe meaningful change begins when people come together around a cause.
+        </h2>
+
+        <div class="about__grid">
+          <div class="about__media" data-reveal>
+            <!-- IMAGE: about — learning together (replaceable) -->
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80" alt="A teacher working with students in a classroom" loading="lazy" />
+          </div>
+          <div class="about__copy">
+            <p data-reveal>
+              Prerna is imagined as a community-first organisation: small teams, long stays,
+              measurable outcomes. We work where the need is and we stay until the need changes.
+            </p>
+            <p data-reveal>
+              Every programme is built with local partners — teachers, health workers, coaches —
+              so the work continues long after a project closes.
+            </p>
+            <div class="about__facts" data-reveal>
+              <div><span>Founded</span><strong>For demonstration</strong></div>
+              <div><span>Focus</span><strong>Education · Health · Sport</strong></div>
+              <div><span>Approach</span><strong>Community-led, partner-delivered</strong></div>
+            </div>
+            <a class="link-arrow" href="#work" data-reveal>See what we do <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== WHAT WE DO ============================== -->
+    <section class="work section" id="work">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>What we do</p>
+          <p class="section__index" data-reveal>( 02 )</p>
+        </div>
+
+        <div class="work__intro">
+          <h2 class="h2" data-split>Three focus areas. One belief: potential is everywhere — opportunity is not.</h2>
+          <p class="work__lede" data-reveal>
+            Each programme runs on its own, and stronger together: a child who learns,
+            heals and plays is a child who stays in school.
+          </p>
+        </div>
+
+        <ul class="work__index">
+          <li class="work__row" data-reveal>
+            <a href="#education">
+              <span class="work__num">01</span>
+              <span class="work__name">Education</span>
+              <span class="work__desc">Learning centres, scholarships, mentorship</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <span class="work__thumb" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy" />
+              </span>
+            </a>
+          </li>
+          <li class="work__row" data-reveal>
+            <a href="#healthcare">
+              <span class="work__num">02</span>
+              <span class="work__name">Healthcare</span>
+              <span class="work__desc">Health camps, maternal care, health literacy</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <span class="work__thumb" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy" />
+              </span>
+            </a>
+          </li>
+          <li class="work__row" data-reveal>
+            <a href="#sports">
+              <span class="work__num">03</span>
+              <span class="work__name">Sports</span>
+              <span class="work__desc">Coaching, kit, safe playgrounds</span>
+              <span class="work__arrow" aria-hidden="true">↗</span>
+              <span class="work__thumb" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy" />
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== PROGRAMME: EDUCATION ============================== -->
+    <section class="programme section" id="education" data-programme="education">
+      <div class="container programme__grid">
+        <div class="programme__media" data-parallax>
+          <!-- IMAGE: education (replaceable) -->
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80" alt="A student writing in a classroom notebook" loading="lazy" />
+          <span class="programme__tag">Programme</span>
+        </div>
+
+        <div class="programme__body">
+          <span class="programme__num" aria-hidden="true" data-reveal>01</span>
+          <p class="eyebrow" data-reveal>Education</p>
+          <h2 class="programme__title" data-split>Open doors to learning.</h2>
+          <p class="programme__copy" data-reveal>
+            Scholarships, neighbourhood learning centres and mentorship that keep children in school —
+            and curious about what comes next. We fund the boring, brilliant things: a desk, a lamp,
+            a teacher who stays.
+          </p>
+          <ul class="programme__list" data-reveal>
+            <li>After-school learning centres</li>
+            <li>Girl-child scholarships</li>
+            <li>Digital &amp; library access</li>
+            <li>Teacher support</li>
+          </ul>
+          <div class="programme__cta" data-reveal>
+            <button class="link-arrow" type="button" data-toast="Programme detail pages are the next phase — this prototype focuses on the donor journey.">Learn More <span aria-hidden="true">→</span></button>
+            <button class="btn btn--solid" type="button" data-donate-open data-programme="education">Support Programme <span class="btn__icon" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROGRAMME: HEALTHCARE ============================== -->
+    <section class="programme programme--dark section" id="healthcare" data-programme="healthcare">
+      <div class="container programme__grid programme__grid--flip">
+        <div class="programme__media" data-parallax>
+          <!-- IMAGE: healthcare (replaceable) -->
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80" alt="A healthcare worker providing care" loading="lazy" />
+          <span class="programme__tag">Programme</span>
+        </div>
+
+        <div class="programme__body">
+          <span class="programme__num" aria-hidden="true" data-reveal>02</span>
+          <p class="eyebrow" data-reveal>Healthcare</p>
+          <h2 class="programme__title" data-split>Build healthier communities.</h2>
+          <p class="programme__copy" data-reveal>
+            Care that travels to the doorstep: health camps with local clinics, maternal support,
+            and the kind of health education that prevents the emergency in the first place.
+          </p>
+          <ul class="programme__list" data-reveal>
+            <li>Mobile health camps</li>
+            <li>Maternal &amp; child care</li>
+            <li>Nutrition programmes</li>
+            <li>Health worker training</li>
+          </ul>
+          <div class="programme__cta" data-reveal>
+            <button class="link-arrow" type="button" data-toast="Programme detail pages are the next phase — this prototype focuses on the donor journey.">Learn More <span aria-hidden="true">→</span></button>
+            <button class="btn btn--gold" type="button" data-donate-open data-programme="healthcare">Support Programme <span class="btn__icon" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROGRAMME: SPORTS ============================== -->
+    <section class="programme section" id="sports" data-programme="sports">
+      <div class="container programme__grid">
+        <div class="programme__media" data-parallax>
+          <!-- IMAGE: sports (replaceable) -->
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80" alt="Young people playing basketball on an outdoor court" loading="lazy" />
+          <span class="programme__tag">Programme</span>
+        </div>
+
+        <div class="programme__body">
+          <span class="programme__num" aria-hidden="true" data-reveal>03</span>
+          <p class="eyebrow" data-reveal>Sports</p>
+          <h2 class="programme__title" data-split>Give potential a place to grow.</h2>
+          <p class="programme__copy" data-reveal>
+            Coaches, kit and safe spaces that turn playgrounds into pathways — building discipline,
+            teamwork and joy, one season at a time.
+          </p>
+          <ul class="programme__list" data-reveal>
+            <li>Community coaching</li>
+            <li>Girls' sport leagues</li>
+            <li>Safe play spaces</li>
+            <li>Equipment &amp; kit</li>
+          </ul>
+          <div class="programme__cta" data-reveal>
+            <button class="link-arrow" type="button" data-toast="Programme detail pages are the next phase — this prototype focuses on the donor journey.">Learn More <span aria-hidden="true">→</span></button>
+            <button class="btn btn--solid" type="button" data-donate-open data-programme="sports">Support Programme <span class="btn__icon" aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== IMPACT ============================== -->
+    <section class="impact section" id="impact">
+      <div class="container">
+        <div class="section__head section__head--light">
+          <p class="eyebrow eyebrow--light" data-reveal>Impact</p>
+          <p class="section__index" data-reveal>( 03 )</p>
+        </div>
+
+        <h2 class="impact__title" data-split>The work, in numbers.</h2>
+
+        <div class="impact__grid">
+          <div class="impact__item" data-reveal>
+            <span class="impact__num" data-count-to="10" data-count-suffix="K+">0</span>
+            <span class="impact__label">Lives touched</span>
+          </div>
+          <div class="impact__item" data-reveal>
+            <span class="impact__num" data-count-to="25" data-count-suffix="+">0</span>
+            <span class="impact__label">Initiatives</span>
+          </div>
+          <div class="impact__item" data-reveal>
+            <span class="impact__num" data-count-to="3">0</span>
+            <span class="impact__label">Programme areas</span>
+          </div>
+        </div>
+
+        <p class="impact__note" data-reveal>
+          Illustrative demo figures for this prototype — configured in <code>js/app.js → demoContent</code>.
+          Not verified Prerna statistics.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================== IMPACT STORIES ============================== -->
+    <section class="stories section" id="stories">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>Impact stories</p>
+          <p class="section__index" data-reveal>( 04 )</p>
+        </div>
+      </div>
+
+      <article class="story-feature">
+        <div class="story-feature__media" data-parallax>
+          <!-- IMAGE: featured story (replaceable) -->
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=2000&q=80" alt="Books stacked in a library" loading="lazy" />
+        </div>
+        <div class="container story-feature__body">
+          <p class="eyebrow" data-reveal>Featured story · Education</p>
+          <h2 class="story-feature__title" data-split>A new beginning through education.</h2>
+          <p class="story-feature__copy" data-reveal>
+            When her school closed, Meera's days went quiet. A Prerna learning centre reopened
+            the door — a desk, a library, a teacher who noticed her. Two terms later she is
+            top of her class, and teaching her younger brother his letters.
+          </p>
+          <button class="link-arrow" type="button" data-reveal data-toast="Full story pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+
+      <div class="container stories__pair">
+        <article class="story-card" data-reveal>
+          <div class="story-card__media">
+            <!-- IMAGE: story 2 (replaceable) -->
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" alt="A doctor smiling with a patient" loading="lazy" />
+          </div>
+          <div class="story-card__body">
+            <p class="story-card__meta"><span>Healthcare</span><span>Field note</span></p>
+            <h3 class="story-card__title">Care that travels to the doorstep.</h3>
+            <p class="story-card__copy">
+              In villages where the nearest clinic is an hour away, the clinic now arrives on two wheels —
+              with blood pressure cuffs, medicine and a midwife.
+            </p>
+            <button class="link-arrow" type="button" data-toast="Full story pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="story-card" data-reveal>
+          <div class="story-card__media">
+            <!-- IMAGE: story 3 (replaceable) -->
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80" alt="A young footballer on a field" loading="lazy" />
+          </div>
+          <div class="story-card__body">
+            <p class="story-card__meta"><span>Sports</span><span>Field note</span></p>
+            <h3 class="story-card__title">A field, a team, a future.</h3>
+            <p class="story-card__copy">
+              Four evenings a week, the empty lot behind the school becomes the strongest room in the
+              neighbourhood — no walls, no fees, one shared ball.
+            </p>
+            <button class="link-arrow" type="button" data-toast="Full story pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== WAYS TO GIVE ============================== -->
+    <section class="give section" id="give">
+      <div class="container give__grid">
+        <div class="give__lead">
+          <p class="eyebrow" data-reveal>Ways to give</p>
+          <h2 class="give__title" data-split>Give in the way that fits your life.</h2>
+          <p class="give__copy" data-reveal>
+            Whatever the size, every gift is put to work where it is needed most — and reported back
+            with the same honesty it arrived with.
+          </p>
+          <button class="btn btn--gold btn--lg" type="button" data-donate-open data-reveal>
+            Donate <span class="btn__icon" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <ul class="give__list">
+          <li data-reveal>
+            <span class="give__num">01</span>
+            <div>
+              <h3>One-time giving</h3>
+              <p>A single gift that funds a term, a camp, a season.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="give__num">02</span>
+            <div>
+              <h3>Monthly giving</h3>
+              <p>Small amounts, steady light — the backbone of our planning.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="give__num">03</span>
+            <div>
+              <h3>In-memory giving</h3>
+              <p>Honour someone by funding a scholarship in their name.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="give__num">04</span>
+            <div>
+              <h3>Corporate / CSR</h3>
+              <p>Partnerships with reporting, site visits and measurable outcomes.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="give__num">05</span>
+            <div>
+              <h3>Volunteering</h3>
+              <p>Time, skills and weekends — teach, coach, build, mentor.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== CSR ============================== -->
+    <section class="csr section" id="csr">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>Corporate / CSR</p>
+          <p class="section__index" data-reveal>( 05 )</p>
+        </div>
+
+        <h2 class="csr__title" data-split>Partnerships that create measurable impact.</h2>
+
+        <div class="csr__grid">
+          <div class="csr__media" data-parallax data-reveal>
+            <!-- IMAGE: CSR / partnership (replaceable) -->
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="A team collaborating around a table" loading="lazy" />
+          </div>
+
+          <ul class="csr__list">
+            <li data-reveal><span>01</span><div><h3>Corporate partnerships</h3><p>Multi-year programmes aligned to your ESG goals.</p></div></li>
+            <li data-reveal><span>02</span><div><h3>CSR programmes</h3><p>Design, delivery and impact reporting under one roof.</p></div></li>
+            <li data-reveal><span>03</span><div><h3>Employee volunteering</h3><p>Structured days your teams will actually remember.</p></div></li>
+            <li data-reveal><span>04</span><div><h3>Community initiatives</h3><p>Place-based projects built with local partners.</p></div></li>
+          </ul>
+        </div>
+
+        <div class="csr__cta" data-reveal>
+          <button class="btn btn--solid btn--lg" type="button" data-toast="Thanks — CSR enquiries are simulated in this prototype. Use the contact form below.">Partner With Prerna <span class="btn__icon" aria-hidden="true">↗</span></button>
+          <button class="btn btn--outline btn--lg" type="button" data-scroll-to="#contact">Start a CSR Conversation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== NEWS ============================== -->
+    <section class="news section" id="news">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-reveal>News &amp; updates</p>
+          <p class="section__index" data-reveal>( 06 )</p>
+        </div>
+
+        <div class="news__grid">
+          <article class="news-card" data-reveal>
+            <div class="news-card__media">
+              <!-- IMAGE: news 1 (replaceable) -->
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="People collaborating at work" loading="lazy" />
+            </div>
+            <div class="news-card__body">
+              <p class="news-card__meta"><span class="news-card__cat">Prerna Updates</span><span>18 Sep 2026</span></p>
+              <h3 class="news-card__title">Two new learning centres open this season.</h3>
+              <button class="link-arrow" type="button" data-toast="Article pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <article class="news-card" data-reveal>
+            <div class="news-card__media">
+              <!-- IMAGE: news 2 (replaceable) -->
+              <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80" alt="Two people in conversation" loading="lazy" />
+            </div>
+            <div class="news-card__body">
+              <p class="news-card__meta"><span class="news-card__cat">Stories</span><span>02 Sep 2026</span></p>
+              <h3 class="news-card__title">Meet the health workers who ride out before sunrise.</h3>
+              <button class="link-arrow" type="button" data-toast="Article pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <article class="news-card" data-reveal>
+            <div class="news-card__media">
+              <!-- IMAGE: news 3 (replaceable) -->
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="A group working together" loading="lazy" />
+            </div>
+            <div class="news-card__body">
+              <p class="news-card__meta"><span class="news-card__cat">Impact</span><span>21 Aug 2026</span></p>
+              <h3 class="news-card__title">What a season of community sport changed.</h3>
+              <button class="link-arrow" type="button" data-toast="Article pages are part of the next phase of this prototype.">Read Story <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="contact section" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow" data-reveal>Contact Prerna</p>
+          <h2 class="contact__title" data-split>Let's talk.</h2>
+
+          <ul class="contact__channels">
+            <li data-reveal><span>General enquiries</span><a href="mailto:hello@prerna.org">hello@prerna.org</a></li>
+            <li data-reveal><span>CSR enquiries</span><a href="mailto:csr@prerna.org">csr@prerna.org</a></li>
+            <li data-reveal><span>Donation support</span><a href="mailto:donate@prerna.org">donate@prerna.org</a></li>
+            <li data-reveal><span>Grievance</span><a href="mailto:grievance@prerna.org">grievance@prerna.org</a></li>
+          </ul>
+
+          <p class="contact__note" data-reveal>Prototype demo — email addresses shown for layout purposes only.</p>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate data-reveal>
+          <div class="field">
+            <label for="cName">Your name</label>
+            <input type="text" id="cName" name="name" autocomplete="name" required placeholder="Full name" />
+          </div>
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" name="email" autocomplete="email" required placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="cTopic">What is this about?</label>
+            <select id="cTopic" name="topic">
+              <option>General enquiry</option>
+              <option>CSR / partnership</option>
+              <option>Donation support</option>
+              <option>Grievance</option>
+              <option>Volunteering</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" name="message" rows="4" required placeholder="Tell us a little about what you need..."></textarea>
+          </div>
+          <button class="btn btn--solid btn--lg" type="submit">Send Message <span class="btn__icon" aria-hidden="true">↗</span></button>
+          <p class="form-success" id="contactSuccess" hidden>Thank you. Your message has been received.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__word">Prerna</p>
+          <p class="footer__mission">
+            Change starts with us — education, healthcare and sport,
+            built with communities and reported with honesty.
+          </p>
+          <button class="btn btn--gold" type="button" data-donate-open>Donate <span class="btn__icon" aria-hidden="true">↗</span></button>
+        </div>
+
+        <nav class="footer__cols" aria-label="Footer">
+          <div>
+            <h4>Explore</h4>
+            <a href="#about">About</a>
+            <a href="#work">Programmes</a>
+            <a href="#impact">Impact</a>
+            <a href="#stories">Stories</a>
+          </div>
+          <div>
+            <h4>Give</h4>
+            <a href="#give">Ways to give</a>
+            <a href="#csr">CSR</a>
+            <button type="button" data-donate-open>Donate</button>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <button type="button" data-toast="Privacy policy page is out of scope for this prototype.">Privacy</button>
+            <button type="button" data-toast="Terms page is out of scope for this prototype.">Terms</button>
+            <button type="button" data-toast="Grievance page is out of scope — email grievance@prerna.org.">Grievance</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Prerna — prototype demo. Not a live website.</p>
+        <p>Education · Healthcare · Sports</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================== TOAST ============================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============================== DONATION JOURNEY ============================== -->
+  <div class="donation" id="donation" role="dialog" aria-modal="true" aria-labelledby="donationHeading" aria-hidden="true">
+    <div class="donation__shell">
+
+      <!-- Left rail: progress -->
+      <aside class="donation__rail">
+        <div class="rail__head">
+          <span class="rail__brand">Prerna.</span>
+          <button class="rail__close" type="button" data-donate-close aria-label="Close donation journey">Close ✕</button>
+        </div>
+
+        <p class="rail__kicker">Donor journey · demo</p>
+
+        <ol class="rail__progress" id="railProgress">
+          <li class="rail__step" data-stage="1"><span class="rail__dot"><i>✓</i><b>01</b></span><span class="rail__label">Donation</span></li>
+          <li class="rail__step" data-stage="2"><span class="rail__dot"><i>✓</i><b>02</b></span><span class="rail__label">Details</span></li>
+          <li class="rail__step" data-stage="3"><span class="rail__dot"><i>✓</i><b>03</b></span><span class="rail__label">Verification</span></li>
+          <li class="rail__step" data-stage="4"><span class="rail__dot"><i>✓</i><b>04</b></span><span class="rail__label">Approval</span></li>
+          <li class="rail__step" data-stage="5"><span class="rail__dot"><i>✓</i><b>05</b></span><span class="rail__label">Payment</span></li>
+          <li class="rail__step" data-stage="6"><span class="rail__dot"><i>✓</i><b>06</b></span><span class="rail__label">Receipt</span></li>
+          <span class="rail__line" aria-hidden="true"><span class="rail__line-fill" id="railFill"></span></span>
+        </ol>
+
+        <div class="rail__summary" id="railSummary" hidden>
+          <div><span>Programme</span><strong id="sumProgramme">—</strong></div>
+          <div><span>Frequency</span><strong id="sumFrequency">—</strong></div>
+          <div><span>Amount</span><strong id="sumAmount">—</strong></div>
+        </div>
+
+        <p class="rail__note">Prototype demo — no real payment is taken and no SMS is sent.</p>
+      </aside>
+
+      <!-- Right: steps -->
+      <div class="donation__main">
+        <div class="donation__mobilebar">
+          <span class="rail__brand">Prerna.</span>
+          <div class="donation__mobilesteps" id="mobileSteps" aria-hidden="true">
+            <i data-stage="1"></i><i data-stage="2"></i><i data-stage="3"></i><i data-stage="4"></i><i data-stage="5"></i><i data-stage="6"></i>
+          </div>
+          <button class="rail__close" type="button" data-donate-close aria-label="Close donation journey">✕</button>
+        </div>
+
+        <div class="steps" id="steps">
+          <p class="sr-only" id="donationHeading">Donation journey</p>
+
+          <!-- STEP 1 — DONATION -->
+          <section class="step is-active" data-step="1" aria-label="Step 1: Donation">
+            <header class="step__head">
+              <p class="step__eyebrow">Step 01 — Donation</p>
+              <h2 class="step__title">Choose your support</h2>
+            </header>
+
+            <fieldset class="fgroup">
+              <legend>Programme</legend>
+              <div class="chip-row" data-role="programme">
+                <label class="chip"><input type="radio" name="dProgramme" value="education" checked /><span>Education</span></label>
+                <label class="chip"><input type="radio" name="dProgramme" value="healthcare" /><span>Healthcare</span></label>
+                <label class="chip"><input type="radio" name="dProgramme" value="sports" /><span>Sports</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="fgroup">
+              <legend>Frequency</legend>
+              <div class="chip-row" data-role="frequency">
+                <label class="chip"><input type="radio" name="dFrequency" value="once" checked /><span>One-time</span></label>
+                <label class="chip"><input type="radio" name="dFrequency" value="monthly" /><span>Monthly</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="fgroup">
+              <legend>Amount</legend>
+              <div class="chip-row chip-row--amount" data-role="amount">
+                <label class="chip"><input type="radio" name="dAmount" value="500" /><span>₹500</span></label>
+                <label class="chip"><input type="radio" name="dAmount" value="1000" checked /><span>₹1,000</span></label>
+                <label class="chip"><input type="radio" name="dAmount" value="2500" /><span>₹2,500</span></label>
+                <label class="chip"><input type="radio" name="dAmount" value="5000" /><span>₹5,000</span></label>
+                <label class="chip"><input type="radio" name="dAmount" value="custom" /><span>Custom</span></label>
+              </div>
+              <div class="custom-amount" id="customAmount" hidden>
+                <label for="customInput">Enter amount (₹)</label>
+                <input type="number" id="customInput" min="1" max="10000000" placeholder="e.g. 7500" inputmode="numeric" />
+                <p class="field-error" id="customError" hidden>Enter an amount between ₹1 and ₹1,00,00,000.</p>
+              </div>
+            </fieldset>
+
+            <div class="step__actions">
+              <button class="btn btn--solid btn--lg" type="button" data-action="to-details">Continue <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 2 — DETAILS -->
+          <section class="step" data-step="2" aria-label="Step 2: Donor details" hidden>
+            <header class="step__head">
+              <p class="step__eyebrow">Step 02 — Donor details</p>
+              <h2 class="step__title">Tell us who you are</h2>
+            </header>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="dName">Full name</label>
+                <input type="text" id="dName" autocomplete="name" placeholder="Full name" required />
+                <p class="field-error" data-error-for="dName" hidden>Please enter your full name.</p>
+              </div>
+              <div class="field">
+                <label for="dEmail">Email</label>
+                <input type="email" id="dEmail" autocomplete="email" placeholder="you@example.com" required />
+                <p class="field-error" data-error-for="dEmail" hidden>Enter a valid email address.</p>
+              </div>
+              <div class="field">
+                <label for="dMobile">Mobile number</label>
+                <input type="tel" id="dMobile" autocomplete="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required />
+                <p class="field-error" data-error-for="dMobile" hidden>Enter a valid 10-digit mobile number.</p>
+              </div>
+              <div class="field">
+                <label for="dPan">PAN / Identifier <span class="label-optional">(optional)</span></label>
+                <input type="text" id="dPan" placeholder="ABCDE1234F" maxlength="10" />
+                <p class="field-error" data-error-for="dPan" hidden>PAN should be 10 characters, e.g. ABCDE1234F.</p>
+              </div>
+            </div>
+
+            <fieldset class="fgroup">
+              <legend>Communication preferences</legend>
+              <div class="check-row">
+                <label class="check"><input type="checkbox" id="prefEmail" checked /><span>Email</span></label>
+                <label class="check"><input type="checkbox" id="prefSms" /><span>SMS</span></label>
+                <label class="check"><input type="checkbox" id="prefWhats" /><span>WhatsApp</span></label>
+              </div>
+            </fieldset>
+
+            <div class="step__actions">
+              <button class="btn btn--ghost-dark" type="button" data-action="back-to-1">← Back</button>
+              <button class="btn btn--solid btn--lg" type="button" data-action="verify-mobile">Verify Mobile <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 3 — OTP -->
+          <section class="step" data-step="3" aria-label="Step 3: OTP verification" hidden>
+            <header class="step__head">
+              <p class="step__eyebrow">Step 03 — Verification</p>
+              <h2 class="step__title">Verify your mobile number</h2>
+              <p class="step__sub">Enter the 6-digit code sent to <strong id="otpTarget">your mobile</strong>.</p>
+            </header>
+
+            <div class="otp" id="otpInputs">
+              <input class="otp__box" name="otp1" inputmode="numeric" maxlength="1" aria-label="OTP digit 1" />
+              <input class="otp__box" name="otp2" inputmode="numeric" maxlength="1" aria-label="OTP digit 2" />
+              <input class="otp__box" name="otp3" inputmode="numeric" maxlength="1" aria-label="OTP digit 3" />
+              <input class="otp__box" name="otp4" inputmode="numeric" maxlength="1" aria-label="OTP digit 4" />
+              <input class="otp__box" name="otp5" inputmode="numeric" maxlength="1" aria-label="OTP digit 5" />
+              <input class="otp__box" name="otp6" inputmode="numeric" maxlength="1" aria-label="OTP digit 6" />
+            </div>
+
+            <p class="field-error" id="otpError" hidden>That code doesn't match the demo OTP. Try 123456.</p>
+
+            <div class="demo-note">
+              <strong>Demo OTP: 123456</strong>
+              <span>Demo verification — no SMS is actually sent.</span>
+            </div>
+
+            <div class="step__actions">
+              <button class="btn btn--ghost-dark" type="button" data-action="back-to-2">← Back</button>
+              <button class="btn btn--solid btn--lg" type="button" data-action="verify-otp">Verify OTP <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 4 — REQUEST SUBMITTED -->
+          <section class="step" data-step="4" aria-label="Step 4: Request submitted" hidden>
+            <header class="step__head">
+              <div class="seal seal--pending" aria-hidden="true">✓</div>
+              <p class="step__eyebrow">Step 04 — Approval</p>
+              <h2 class="step__title">Thank you for supporting Prerna.</h2>
+              <p class="step__sub">Donation request submitted.</p>
+            </header>
+
+            <p class="status-pill status-pill--pending">Pending Prerna approval</p>
+            <p class="step__note">Prerna will review your donation request before payment.</p>
+
+            <dl class="summary-card">
+              <div><dt>Programme</dt><dd id="s4Programme">—</dd></div>
+              <div><dt>Amount</dt><dd id="s4Amount">—</dd></div>
+              <div><dt>Frequency</dt><dd id="s4Frequency">—</dd></div>
+              <div><dt>Donor</dt><dd id="s4Donor">—</dd></div>
+            </dl>
+
+            <div class="step__actions">
+              <button class="btn btn--ghost-dark" type="button" data-action="restart">Start over</button>
+              <button class="btn btn--gold btn--lg" type="button" data-action="simulate-approval">Simulate Prerna Approval <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 5 — APPROVAL -->
+          <section class="step" data-step="5" aria-label="Step 5: Approved" hidden>
+            <header class="step__head">
+              <div class="seal seal--ok" aria-hidden="true">✓</div>
+              <p class="step__eyebrow">Step 04 — Approval</p>
+              <h2 class="step__title">Donation Request Approved</h2>
+              <p class="step__sub">Your donation request has been approved.</p>
+            </header>
+
+            <p class="status-pill status-pill--ok">Approved</p>
+
+            <div class="paylink-card">
+              <div>
+                <span class="paylink-card__label">Secure Payment Link Ready</span>
+                <span class="paylink-card__ref" id="s5Ref">PRN-DEMO-000000</span>
+              </div>
+              <span class="badge-demo">Demo payment</span>
+            </div>
+
+            <div class="step__actions">
+              <button class="btn btn--solid btn--lg" type="button" data-action="to-payment">Continue to Payment <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 6 — PAYMENT -->
+          <section class="step" data-step="6" aria-label="Step 6: Payment" hidden>
+            <header class="step__head">
+              <p class="step__eyebrow">Step 05 — Payment <span class="badge-demo">Demo payment</span></p>
+              <h2 class="step__title">Prerna Donation</h2>
+            </header>
+
+            <div class="pay-card">
+              <div class="pay-card__row"><span>Programme</span><strong id="s6Programme">—</strong></div>
+              <div class="pay-card__row"><span>Frequency</span><strong id="s6Frequency">—</strong></div>
+              <div class="pay-card__row pay-card__row--total"><span>Amount</span><strong id="s6Amount">—</strong></div>
+              <p class="pay-card__secure">🔒 Simulated secure checkout — no card details are collected.</p>
+            </div>
+
+            <div class="step__actions">
+              <button class="btn btn--ghost-dark" type="button" data-action="back-to-5">← Back</button>
+              <button class="btn btn--gold btn--lg" type="button" data-action="pay">Pay Securely — Demo <span class="btn__icon" aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <!-- STEP 7 — SUCCESS / RECEIPT -->
+          <section class="step" data-step="7" aria-label="Step 7: Receipt" hidden>
+            <header class="step__head">
+              <div class="seal seal--ok" aria-hidden="true">✓</div>
+              <p class="step__eyebrow">Step 06 — Receipt</p>
+              <h2 class="step__title">Payment Successful</h2>
+              <p class="step__sub">Your generosity just became somebody's opportunity.</p>
+            </header>
+
+            <div class="receipt">
+              <div class="receipt__head">
+                <span class="receipt__brand">Prerna.</span>
+                <span class="badge-demo">Demo receipt</span>
+              </div>
+              <dl class="receipt__list">
+                <div><dt>Donation reference</dt><dd id="rRef">PRN-DEMO-000000</dd></div>
+                <div><dt>Programme</dt><dd id="rProgramme">—</dd></div>
+                <div><dt>Amount</dt><dd id="rAmount">—</dd></div>
+                <div><dt>Date</dt><dd id="rDate">—</dd></div>
+                <div><dt>Donor</dt><dd id="rDonor">—</dd></div>
+                <div><dt>Status</dt><dd class="receipt__ok">Paid — demo</dd></div>
+              </dl>
+            </div>
+
+            <div class="step__actions">
+              <button class="btn btn--ghost-dark" type="button" data-action="restart">Donate again</button>
+              <button class="btn btn--solid btn--lg" type="button" data-action="download-receipt">Download Receipt <span class="btn__icon" aria-hidden="true">↓</span></button>
+            </div>
+            <button class="link-arrow step__done" type="button" data-donate-close>Close and keep exploring →</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="noscript">This prototype needs JavaScript for the donation journey. Please enable JavaScript.</div>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/donation.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  body { background:#111; color:#eee; font:13px monospace; margin:0; padding:12px; }
+  .grid { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+  figure { margin:0; background:#222; }
+  img { width:100%; height:150px; object-fit:cover; display:block; background:#444; }
+  figcaption { padding:4px 6px; font-size:11px; word-break:break-all; }
+  .bad { color:#f66; }
+</style>
+</head>
+<body>
+<div class="grid" id="g"></div>
+<script>
+const ids = [
+ 'photo-1503454537195-1dcabb73ffb9',
+ 'photo-1544717305-2782549b5136',
+ 'photo-1532629345422-7515f3d16bb6',
+ 'photo-1456513080510-7bf3a84b82f8',
+ 'photo-1524995997946-a1c2e315a42f',
+ 'photo-1509099836639-18ba1795216d',
+ 'photo-1489493585363-d69421e0edd3',
+ 'photo-1594708767771-a7502209ff51',
+ 'photo-1571210862729-78a52d3779a2',
+ 'photo-1560785496-3c9d27877182',
+ 'photo-1517927033932-b3d18e61fb3a',
+ 'photo-1610484826967-09c5720778c7',
+ 'photo-1587654780291-39c9404d746b',
+ 'photo-1593113646773-028c64a8f1b8',
+ 'photo-1573497019940-1c28c88b4f3e',
+ 'photo-1559027615-cd4628902d4a',
+ 'photo-1469571486292-0ba58a3f068b',
+ 'photo-1526676037777-05a232554f77',
+ 'photo-1600093463592-8e36ae95ef56',
+ 'photo-1542810634-71277d95dcbb',
+ 'photo-1531206715517-5c0ba140b2b8',
+ 'photo-1541692641319-981cc79ee10a',
+ 'photo-1607453998774-d533f65dac99',
+ 'photo-1516627145497-ae6968895b74',
+ 'photo-1611348586804-61bf6c080437',
+ 'photo-1577896851231-70ef18881754',
+ 'photo-1580894732444-8ecded7900cd',
+ 'photo-1509062522246-3755977927d7',
+ 'photo-1522202176988-66273c2fd55f',
+ 'photo-1523240795612-9a054b0db644',
+ 'photo-1488521787991-ed7bbaae773c',
+ 'photo-1531482615713-2afd69097998',
+ 'photo-1522071820081-009f0129c71c',
+ 'photo-1543168256-418811576931',
+ 'photo-1472162072942-cd5147eb3902'
+];
+const g = document.getElementById('g');
+ids.forEach(id => {
+  const f = document.createElement('figure');
+  const img = document.createElement('img');
+  img.src = 'https://images.unsplash.com/' + id + '?auto=format&fit=crop&w=500&q=60';
+  img.onerror = () => { f.classList.add('bad'); img.alt = 'FAILED'; };
+  const c = document.createElement('figcaption');
+  c.textContent = id;
+  f.appendChild(img); f.appendChild(c);
+  g.appendChild(f);
+});
+</script>
+</body>
+</html>
