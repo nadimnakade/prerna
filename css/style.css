@@ -718,6 +718,26 @@ body.menu-open { overflow: hidden; }
   gap: clamp(1.5rem, 4vw, 3rem);
   margin-top: clamp(2.5rem, 6vw, 4.5rem);
 }
+
+.reports { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(244,238,225,.25); }
+.reports h3 { color: var(--cream); font-family: var(--serif); font-size: clamp(1.5rem,3vw,2.2rem); margin-bottom: 1.25rem; }
+.reports__grid, .leadership__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.reports__grid article { display:flex; flex-direction:column; gap:.75rem; padding:1.4rem; border:1px solid rgba(244,238,225,.25); color:var(--cream); }
+.reports__grid span { color:var(--gold); text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; }
+.leadership { background:var(--cream); }
+.leadership__grid { margin-top:2.5rem; }
+.leadership__grid article { border-top:1px solid var(--line); padding-top:1rem; }
+.leadership__photo { aspect-ratio:4/3; display:grid; place-items:center; margin-bottom:1rem; background:rgba(14,59,44,.08); color:var(--ink-soft); text-transform:uppercase; letter-spacing:.12em; }
+.leadership__grid h3 { font-family:var(--serif); font-size:1.35rem; }
+.leadership__grid p, .leadership__registration { color:var(--ink-soft); }
+.leadership__registration { margin-top:2rem; }
+.contact__channels strong { font-weight:500; text-align:right; }
+.field-hint { margin-top:.65rem; color:var(--ink-soft); font-size:.84rem; }
+.check--block { display:flex; margin-top:1rem; line-height:1.5; }
+.check--block a { text-decoration:underline; }
+.legal-page { background:var(--cream); color:var(--ink); }
+.legal-page main { min-height:100vh; }
+.legal-page .h2 { margin:1rem 0 2rem; }
 .impact__item {
   border-top: 1px solid var(--line-light);
   padding-top: clamp(1rem, 2vw, 1.75rem);
@@ -1465,6 +1485,7 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 768px) {
+  .reports__grid, .leadership__grid { grid-template-columns:1fr; }
   .hero { min-height: 92svh; }
   .hero__row { flex-direction: column; align-items: flex-start; }
   .hero__cta { width: 100%; }

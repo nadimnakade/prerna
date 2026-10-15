@@ -7,9 +7,9 @@
 const demoContent = {
   /* ---- DEMO impact figures (replace with verified Prerna data) ---- */
   impact: [
-    { value: 10, suffix: 'K+', label: 'Lives touched' },
-    { value: 25, suffix: '+', label: 'Initiatives' },
-    { value: 3, suffix: '', label: 'Programme areas' }
+    { value: null, suffix: '', label: 'Lives touched' },
+    { value: null, suffix: '', label: 'Initiatives' },
+    { value: null, suffix: '', label: 'Programme areas' }
   ],
 
   programmeNames: {
@@ -97,7 +97,7 @@ function buildImpact() {
     .map(
       (item) => `
       <div class="impact__item" data-reveal>
-        <span class="impact__num" data-count-to="${item.value}" data-count-suffix="${item.suffix}">0</span>
+        <span class="impact__num">—</span>
         <span class="impact__label">${item.label}</span>
       </div>`
     )
